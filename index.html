@@ -11,17 +11,16 @@
             .then(buffer => WebAssembly.compile(buffer))
             .then(module => {
               const instance = new WebAssembly.Instance(module);
-              document.getElementById("btn").addEventListener("click", function() {
-                      alert("count function result is : " + instance.exports.count());
+              document.getElementById("btn").addEventListener("click", () => {
+                      btn.value=instance.exports.count();
                   }, false);
             });
       } else {
-        output.value = "Your browser doesn't support Web Assembly. You may need " +
-        "to enable it in your browser's flags.";
+        output.value = "No Web Assembly support.";
       }
   </script>
   </head>
 <body>
-  <input type="button" id="btn" value="Click me to execute hello world!" />
+  <input type="button" id="btn" value="0" />
 </body>
 </html>

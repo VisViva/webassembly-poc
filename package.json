@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server ./"
+    "start": "clang -emit-llvm --target=wasm32 -S index.c && llc index.ll -march=wasm32 && s2wasm index.s > index.wast && wast2wasm -o index.wasm index.wast && http-server ./"
   },
   "author": "Vis Viva",
   "license": "ISC",

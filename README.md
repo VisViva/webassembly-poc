@@ -1,6 +1,6 @@
-##Web Assembly Poc
+## Web Assembly Poc
 
-##Installing the Firefox Nightly
+## Installing the Firefox Nightly
 
 `cd`
 
@@ -12,11 +12,11 @@
 
 `./firefox`
 
-##Ubuntu requirements
+## Ubuntu requirements
 
 `sudo apt-get install git cmake make ninja-build`
 
-##LLVM with WebAssembly support
+## LLVM with WebAssembly support
 
 `git clone http://llvm.org/git/llvm.git`
 
@@ -40,7 +40,7 @@
 
 `ninja install`
 
-##Compiling Binaryen
+## Compiling Binaryen
 
 `cd`
 
@@ -54,7 +54,7 @@
 
 `sudo make install`
 
-##Installing the WebAssembly Binary Toolkit
+## Installing the WebAssembly Binary Toolkit
 
 `git clone https://github.com/WebAssembly/wabt.git`
 
@@ -70,7 +70,7 @@
 
 `sudo ninja install`
 
-##Compiling the code
+## Compiling the code
 
 `clang -emit-llvm --target=wasm32 -S index.c`
 
